@@ -1,3 +1,158 @@
-body{
-    background-color: whitesmoke;
+* {
+    margin: 0;
+}
+
+/* Background and font definitions */
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+/* Container setup for calculator */
+#calculator {
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1px;
+    background-color: rgb(24, 24, 24);
+}
+
+
+/* Display of the calculator */
+#calcDisplay {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    font-size: 50px;
+    color: rgb(228, 228, 228);
+    text-align: end;
+    margin: 40px 10px;
+    overflow: hidden;
+}
+
+/* General button style */
+button {
+    background-color: rgb(231, 231, 231);
+    font-size: 40px;
+    border-style: none;
+    outline: none;
+}
+
+button:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+    background-color: rgb(216, 216, 216);
+}
+
+#btnEquals:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+    background-color: rgb(24, 105, 187);
+}
+
+#btnPlus:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+    background-color: rgb(24, 105, 187);
+}
+
+#btnMinus:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+    background-color: rgb(24, 105, 187);
+}
+
+#btnMultiply:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+    background-color: rgb(24, 105, 187);
+}
+
+#btnDivide:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+    background-color: rgb(24, 105, 187);
+}
+
+
+/* Button placements on the grid. */
+#btnZero {
+    grid-row-start: 7;
+    grid-column-end: span 2;
+    border-bottom-left-radius: 20px;
+}
+#btnDot {
+    grid-row-start: 7;
+    grid-column-start: 3;
+}
+#btnEquals {
+    grid-row-start: 7;
+    grid-column-start: 4;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(28, 114, 201);
+}
+#btnOne {
+    grid-row-start: 6;
+}
+#btnTwo {
+    grid-row-start: 6;
+    grid-column-start: 2;
+}
+#btnThree {
+    grid-row-start: 6;
+    grid-column-start: 3;
+}
+#btnPlus {
+    grid-row-start: 6;
+    grid-column-start: 4;
+    background-color: rgb(28, 114, 201);
+}
+#btnFour {
+    grid-row-start: 5;
+}
+#btnFive {
+    grid-row-start: 5;
+    grid-column-start: 2;
+}
+#btnSix {
+    grid-row-start: 5;
+    grid-column-start: 3;
+}
+#btnMinus {
+    grid-row-start: 5;
+    grid-column-start: 4;
+    background-color: rgb(28, 114, 201);
+}
+#btnSeven {
+    grid-row-start: 4;
+}
+#btnEight {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+#btnNine {
+    grid-row-start: 4;
+    grid-column-start: 3;
+}
+#btnMultiply {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    background-color: rgb(28, 114, 201);
+}
+#btnDivide {
+    grid-row-start: 3;
+    grid-column-start: 4;
+    background-color: rgb(28, 114, 201);
+}
+
+#placeholder {
+    grid-row-start: 3;
+    grid-column-end: span 3;
+    background-color: white;
+    border: none;
 }
