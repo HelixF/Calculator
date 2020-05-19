@@ -50,35 +50,28 @@ button:active {
 }
 
 #btnEquals:active {
-    border-bottom-width: 2px;
-    transform: translateY(1px);
     background-color: rgb(24, 105, 187);
 }
 
 #btnPlus:active {
-    border-bottom-width: 2px;
-    transform: translateY(1px);
     background-color: rgb(24, 105, 187);
 }
 
 #btnMinus:active {
-    border-bottom-width: 2px;
-    transform: translateY(1px);
     background-color: rgb(24, 105, 187);
 }
 
 #btnMultiply:active {
-    border-bottom-width: 2px;
-    transform: translateY(1px);
     background-color: rgb(24, 105, 187);
 }
 
 #btnDivide:active {
-    border-bottom-width: 2px;
-    transform: translateY(1px);
     background-color: rgb(24, 105, 187);
 }
 
+#btnAC:active {
+    background-color: rgb(247, 247, 247);
+}
 
 /* Button placements on the grid. */
 #btnZero {
@@ -150,9 +143,17 @@ button:active {
     background-color: rgb(28, 114, 201);
 }
 
+#btnAC {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    background-color: rgb(255, 255, 255);
+}
+
 #placeholder {
     grid-row-start: 3;
-    grid-column-end: span 3;
+    grid-column-start: 2;
+    grid-column-end: span 2;
     background-color: white;
     border: none;
 }
+
