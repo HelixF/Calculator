@@ -48,7 +48,7 @@ function operate(operator, num1, num2) {
      else if (operator === '-') {
          return(subtract(num1, num2));
      }
-     else if (operator === '*') {
+     else if (operator === 'x') {
          return(multiply(num1, num2));
      }
      else if (operator === '/') {
@@ -96,22 +96,29 @@ function ClearAll() {
 
 
 // Add event listeners to operator buttons
-plusBtn.addEventListener('click' , operatorPressed);
+plusBtn.addEventListener('click' , () => {operatorPressed(plusBtn.innerHTML)});
+minusBtn.addEventListener('click' , () => {operatorPressed(minusBtn.innerHTML)});
+multiplyBtn.addEventListener('click' , () => {operatorPressed(multiplyBtn.innerHTML)});
+divideBtn.addEventListener('click' , () => {operatorPressed(divideBtn.innerHTML)});
 
-function operatorPressed(){
+function operatorPressed(param){
     operandOne = displayValue.innerHTML;
-    operatorSelected = plusBtn.innerHTML;
+    operatorSelected = param;
 }
 
 // Equal sign pressed.
 equalBtn.addEventListener('click', evaluateMath);
 
 function evaluateMath() {
+    if (operatorSelected === 0) {
+        alert('No operator selected');
+        return;
+    }
     operandTwo = displayValue.innerHTML;
 
     let result = operate(operatorSelected, parseInt(operandOne), parseInt(operandTwo));
     displayValue.innerHTML = result;
-    operandOne = result;
+    operandOne = operandTwo;
 }
 
 
